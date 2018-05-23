@@ -2,7 +2,8 @@
 <html lang="en">
 
   <head>
-    <!-- Link para fontes no Google Fonts -->
+    <meta charset="utf-8"/>
+    <!--Link para fontes no Google Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
@@ -12,8 +13,12 @@
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Importando o favicon da página -->
+    <!--Importando o favicon da página-->
     <link rel="shortcut icon" type="image/png" href="assets/favicon.png" />
+    
+    <!--Importando extensões JavaScript-->
+    <script type="text/javascript" src="js/crypto-js/crypto-js.js"></script>
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 
     <title> Marvel Character List </title>
   </head>
@@ -32,32 +37,31 @@
         </form>
       </div>
     </nav>
-    <div class="row">
-      <div class="col s12 m6 l3">
+    <div id="characters" class="row">
+      <div class="model-card col s12 m6 l3 ">
         <div class="card">
           <div class="card-image">
-           <img src="http://i.annihil.us/u/prod/marvel/i/mg/9/80/4ce5a59d27a81/landscape_incredible.jpg">
-            <!--<a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">more_vert</i></a>-->
+           <img class="hero-pic" src="http://x.annihil.us/u/prod/marvel/i/mg/3/40/4bb4680432f73/landscape_incredible.jpg">
           </div>
           <div class="card-content">
-            <span class="card-title activator grey-text text-darken-4">Character Name<i class="material-icons right">menu</i></span>
-            <p>Character description</p>
+            <span class="char-name card-title activator grey-text text-darken-4"><i class="material-icons right">menu</i>Test</span>
+            <p class="description"></p>
           </div>
           <div class="card-reveal">
-            <span class="card-title grey-text text-darken-4">More info<i class="material-icons right">close</i></span>
-            <a class="waves-effect waves-light btn">Comics</a><span class="amount" >88</span>
-            <a class="waves-effect waves-light btn">Series</a><span class="amount">88</span>
-            <a class="waves-effect waves-light btn">Events</a><span class="amount">88</span>
-            <a class="waves-effect waves-light btn">Stories</a><span class="amount">88</span>
+            <span class="internal-title card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+            <a class="waves-effect waves-light btn">Comics</a><span class="c-amount" ></span>
+            <a class="waves-effect waves-light btn">Series</a><span class="se-amount"></span>
+            <a class="waves-effect waves-light btn">Events</a><span class="e-amount"></span>
+            <a class="waves-effect waves-light btn">Stories</a><span class="st-amount"></span>
           </div>
         </div>
       </div> 
     </div>
 
 
-
-    <!--JavaScript at end of body for optimized loading-->
+    <!--JavaScript que modifica o HTML no fim do body-->
     <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
   </body>
 
 </html>

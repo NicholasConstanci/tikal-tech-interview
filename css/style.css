@@ -25,3 +25,7 @@ a.btn + span{
   position: relative;
   top: 6%;
 }
+
+.model-card{
+  display: none;
+}
