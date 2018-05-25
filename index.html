@@ -6,17 +6,16 @@
     <!--Link para fontes no Google Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import materialize.css-->
+    <!--Importar arquivos CSS-->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
     <link type="text/css" rel="stylesheet" href="css/style.css" />
-
-    <!--Let browser know website is optimized for mobile-->
+    <!--MOstra para os browsers que a página é mobile-friendly-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!--Importando o favicon da página-->
     <link rel="shortcut icon" type="image/png" href="assets/favicon.png" />
     
-    <!--Importando extensões JavaScript-->
+    <!--Importando arquivos JavaScript-->
     <script type="text/javascript" src="js/crypto-js/crypto-js.js"></script>
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 
@@ -24,42 +23,59 @@
   </head>
 
   <body>
-
-    <nav>
-      <div class="nav-wrapper row">
-        <div class="col hidden-s hidden-m l3 left"><a href="#" class="brand-logo hide-on-small-only">Marvel Characters</a></div>
-        <form>
-          <div class="input-field col s12 m12 l9 right">
-            <input id="search" type="search" required>
-            <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-            <i class="material-icons">close</i>
-          </div>
-        </form>
-      </div>
-    </nav>
+   <!--Barra de navegação com pesquisa-->
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper row">
+          <div class="col hide-on-med-and-down l3 left"><a href="index.html" class="brand-logo hide-on-small-only"><span><img class="img-brand-logo hide-on-med-and-down"  src="assets/logo.png"/></span><span id="site-brand">Characters List</span></a></div>
+          <form onsubmit="return searchCharacters()">
+            <div class="input-field col s12 m12 l9 right">
+              <input id="search" type="search" required>
+              <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+              <i class="material-icons">close</i>
+            </div>
+          </form>
+        </div>
+      </nav>
+    </div>
+    <!--Aviso ao não encontrar nenhum resultado na pesquisa-->
+    <div class="card red darken-1">
+        <div id="no-results" class="card-content white-text" hidden="hidden">
+          <p>No results found!</p>
+        </div>
+    </div>
+    <!--Div onde ficam os cartões dos personagens-->
     <div id="characters" class="row">
-      <div class="model-card col s12 m6 l3 ">
+      <!--Cartão modelo usado pelo Javascript-->
+      <div class="model-card card-holder col s12 m6 l3 ">
         <div class="card">
           <div class="card-image">
-           <img class="hero-pic" src="http://x.annihil.us/u/prod/marvel/i/mg/3/40/4bb4680432f73/landscape_incredible.jpg">
+           <img class="hero-pic" src="">
           </div>
           <div class="card-content">
-            <span class="char-name card-title activator grey-text text-darken-4"><i class="material-icons right">menu</i>Test</span>
-            <p class="description"></p>
+            <span class="char-name truncate card-title activator grey-text text-darken-4"><i class="material-icons right">menu</i></span>
+            <p class="description truncate"></p>
           </div>
+          <!--Sub-cartão com descrição e botões-->
           <div class="card-reveal">
-            <span class="internal-title card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
-            <a class="waves-effect waves-light btn">Comics</a><span class="c-amount" ></span>
-            <a class="waves-effect waves-light btn">Series</a><span class="se-amount"></span>
-            <a class="waves-effect waves-light btn">Events</a><span class="e-amount"></span>
-            <a class="waves-effect waves-light btn">Stories</a><span class="st-amount"></span>
+            <span class="char-name internal-title card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+              <div class="internal-card">
+                <p></p>
+                <!--Botões com link para o site da Marvel-->
+                <div class="card-action">
+                   <!--Mostra todas comics em que o personagem apareceu-->
+                  <a class="waves-effect waves-light btn s6 m6 l6 red">Comics</a>
+                  <!--Mostra uma página com vários detalhes sobre o personagem-->
+                  <a class="waves-effect waves-light btn s6 m6 l6 red">Details</a>
+                </div>    
+              </div>       
           </div>
         </div>
       </div> 
     </div>
 
 
-    <!--JavaScript que modifica o HTML no fim do body-->
+    <!--JavaScript que modifica o HTML no fim do body para melhor carregamento-->
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
   </body>

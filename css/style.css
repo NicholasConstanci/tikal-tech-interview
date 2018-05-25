@@ -1,31 +1,35 @@
-.col{
-    /*border: 2px solid #ddd;*/
-    
-    transition: 2s all ease;
-}
-
+/*Define a largura e o espaçamento dos botões*/
 a.btn{
   margin-right: 8%;
   margin-top: 5%;
   width: 40%;
-  background-color: #EE1B24;
 }
-
+/*Define a fonte dos botões*/
 a.btn + span{
-  font-family: 'Roboto', sans-serif;
-  font-size: 
+  font-family: 'Roboto', sans-serif; 
 }
-
+/*Define a cor da barra de navegação*/
 .nav-wrapper{
   background-color: #EE1B24;
 }
-
-.amount{
-  font-size: 1.5em;
-  position: relative;
-  top: 6%;
-}
-
+/*Oculta o cartão modelo*/
 .model-card{
   display: none;
 }
+/*Define a altura do espaço da descrição*/
+.description{
+  height: 35px;
+}
+/*Define o tamanho da imagem de Logo*/
+.img-brand-logo{
+  height: 64px;
+  width: 64px;
+}
+/*Define o tamanho e espaçamento do nome do site*/
+#site-brand{
+  position: fixed;
+  top: 0;
+  margin-left: 10px;
+  font-size: 24px;
+}
+
